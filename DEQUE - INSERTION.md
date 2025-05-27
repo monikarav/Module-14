@@ -1,68 +1,54 @@
-# Exp.No: 13  
-# Deque
+# Exp.No: 15 
+# SEB
 
-## AIM :
+### AIM  
 
-To implement a Priority Queue using Python lists, where elements are inserted in order and the element with the highest priority (largest number) is deleted first.
+To Write a Python program to insert 'h','o','n' at FRONT END of deque using collection built-in function.
 
-## ALGORITHM :
+### ALGORITHM  
 
-Step 1 : Create a class PriorityQueue with a list queue to hold the elements.
+1. Start the program.
 
-Step 2 : Use insert(data) method to append elements to the list.
+2. Import Module: Import the collections module to use the deque data structure.
 
-Step 3 : In delete() method, sort the list in ascending order to bring the highest element to the end.
+3. Take Inputs: Read three inputs from the user and store them in n1, n2, and n3.
 
-Step 4 : Use pop() to remove and return the last element (highest priority).
+4. Initialize Deque: Create a deque de initialized with the three input values [n1, n2, n3].
 
-Step 5 : Check isEmpty() to determine whether the queue is empty.
+5. Append Left 'h': Insert the character 'h' at the left (front) end of the deque.
 
-Step 6 : Accept n input values, insert them into the queue.
+6. Append Left 'o': Insert the character 'o' at the front of the deque.
 
-Step 7 : Print and delete elements one by one until the queue is empty.
+7. Append Left 'n': Insert the character 'n' at the front of the deque.
 
-## PROGRAM : 
+8. Display Deque: Print the final contents of the deque after all left appends.
+
+9. Stop the program.
+
+### PROGRAM  
 
 ```
-# A simple implementation of Priority Queue
-# using Queue.
-class PriorityQueue(object):
-	def __init__(self):
-		self.queue = []
+import collections
 
-	def __str__(self):
-		return ' '.join([str(i) for i in self.queue])
+n1=input()
+n2=input()
+n3=input()
 
-	# for checking if the queue is empty
-	def isEmpty(self):
-		return len(self.queue) == 0
+de=collections.deque([n1,n2,n3])
 
-	# for inserting an element in the queue
-	def insert(self, data):
-		self.queue.append(data)
+de.appendleft('h')
+de.appendleft('o')
+de.appendleft('n')
 
-	# for popping an element based on Priority
-	def delete(self):
-		self.queue.sort()
-		for i in range(len(self.queue)):
-		    return self.queue.pop()
-myQueue = PriorityQueue()
-n=int(input())	
-for i in range(0, n):
-    ele = int(input())
-    myQueue.insert(ele)
-	
-print(myQueue)		
-while not myQueue.isEmpty():
-	print(myQueue.delete())
+print("The deque after appending at right is : ")
+print(de)
 
 ```
 
-## OUTPUT :
+### OUTPUT
 
-![image](https://github.com/user-attachments/assets/76bbab38-0796-4e35-87d8-9c55243815c9)
+![image](https://github.com/user-attachments/assets/e67971b4-1ad7-449c-ab6d-77915298c684)
 
-## RESULT :
+### RESULT
 
-Thus the implemention of a Priority Queue using Python lists, where elements are inserted in order and the element with the highest priority (largest number) is deleted first is successfully verified.
-
+Thus the  Python program to insert 'h','o','n' at FRONT END of deque using collection built-in function was successfully implemented.
